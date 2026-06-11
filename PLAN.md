@@ -9,17 +9,22 @@
 ## Phase 2: Content & CMS
 - [x] 5. Sanity set up, studio accessible at `/studio`
 - [x] 6. Project content model defined (`name`, `description`, `tags`, `url`)
-- [x] 7. Projects page fetching live data from Sanity — **verify rendering next session**
+- [x] 7. Projects page fetching live data from Sanity — verified rendering ✓
 
 ## Phase 3: Polish
-- [ ] 8. Refine styling with Tailwind v4 (CSS-first config in `globals.css`, no `tailwind.config.js`)
-- [ ] 9. Social links already on CV page (GitHub, LinkedIn) ✓
+- [ ] 8. Refine styling across all pages (in progress)
+  - [x] Home page: FillLink components with canvas-based pixel-accurate hover fill animation (bottom-to-top white fill)
+  - [x] CV page: brutalist section headers, scrolling vertical name ticker (VerticalName, left side, white, reverse), right-aligned social links
+  - [ ] Projects page: styling still needs work
+  - [x] Route group `(main)` for shared nav layout on CV/Projects, home page standalone
+- [ ] 9. Social links on CV page (GitHub, LinkedIn) — right-aligned ✓ (done, tracked under item 8)
 - [ ] 10. Deploy — push to GitHub, connect to Vercel
 
 ## Key decisions
-- **CMS:** Sanity (TBD)
-- **Design:** Minimal / typographic
-- **Pages:** Home (maybe), CV/About, Projects
+- **CMS:** Sanity
+- **Design:** Brutalist / constructivist — rust background, black/white only, heavy uppercase typography
+- **Pages:** Home, CV (hardcoded), Projects (Sanity CMS)
+- **Layout:** `app/layout.tsx` (root, font only) + `app/(main)/layout.tsx` (nav + container for CV/Projects)
 
 ## Mental model: Next.js App Router
 - Every file in `app/` is a Server Component by default — runs on the server, can be `async`
