@@ -9,7 +9,7 @@ const font = Darker_Grotesque({
 
 export const metadata: Metadata = {
     title: "Julius Manowski",
-    description: "Software Engineer based in Edinburgh",
+    description: "Business travel tech & integrations specialist by day, software engineer by night — based in Edinburgh.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
