@@ -38,7 +38,7 @@ function Ticker({ position }: { position: 'left' | 'right' }) {
 
     return (
         <div
-            className="hidden md:block fixed top-0 h-screen overflow-hidden pointer-events-none"
+            className="hidden lg:block fixed top-0 h-screen overflow-hidden pointer-events-none"
             style={{ [isLeft ? 'left' : 'right']: 0 }}
         >
             <div ref={innerRef}>
