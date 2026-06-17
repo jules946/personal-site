@@ -8,8 +8,21 @@ const font = Darker_Grotesque({
 });
 
 export const metadata: Metadata = {
-    title: "Julius Manowski",
-    description: "Business travel tech & integrations specialist by day, software engineer by night — based in Edinburgh.",
+    title: "Julius Manowski — Personal Site",
+    description: "Business travel tech & integrations specialist by day, software engineer by night — based in Edinburgh with a passion for building things.",
+    openGraph: {
+        title: "Julius Manowski",
+        description: "Business travel tech & integrations specialist by day, software engineer by night — based in Edinburgh with a passion for building things.",
+        url: "https://jules946.dev",
+        siteName: "Julius Manowski",
+        locale: "en_GB",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Julius Manowski",
+        description: "Business travel tech & integrations specialist by day, software engineer by night — based in Edinburgh with a passion for building things.",
+    },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
