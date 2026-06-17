@@ -114,7 +114,8 @@ export default function FillLink({ href, children }: { href: string; children: s
     }, [tick]);
 
     const onClick = useCallback((e: React.MouseEvent<SVGSVGElement>) => {
-        if (isOverLetter(e.clientX, e.clientY)) router.push(href);
+        const isTouch = window.matchMedia('(hover: none)').matches;
+        if (isTouch || isOverLetter(e.clientX, e.clientY)) router.push(href);
     }, [isOverLetter, router, href]);
 
     return (

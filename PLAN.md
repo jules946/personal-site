@@ -20,10 +20,16 @@
 - [ ] 9. Social links on CV page (GitHub, LinkedIn) — right-aligned ✓ (done, tracked under item 8)
 - [x] 10. Deploy — https://personal-site-seven-puce.vercel.app
 
+## Phase 4: Iteration
+- [x] CV moved to Sanity CMS
+- [ ] Mobile responsiveness — home page, CV, projects
+- [ ] Custom domain
+- [ ] SEO — meta tags, og:image
+
 ## Key decisions
-- **CMS:** Sanity
+- **CMS:** Sanity (projects + CV)
 - **Design:** Brutalist / constructivist — rust background, black/white only, heavy uppercase typography
-- **Pages:** Home, CV (hardcoded), Projects (Sanity CMS)
+- **Pages:** Home, CV (Sanity), Projects (Sanity)
 - **Layout:** `app/layout.tsx` (root, font only) + `app/(main)/layout.tsx` (nav + container for CV/Projects)
 
 ## Mental model: Next.js App Router
