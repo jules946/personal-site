@@ -5,7 +5,8 @@ import project from "./sanity/schemaTypes/project";
 export default defineConfig({
     projectId: "cwixueiz",
     dataset: "production",
-    plugins: [structureTool()],
+    plugins: [structureTool({ defaultDocumentNode: undefined })],
+    basePath: "/studio",
     schema: {
         types: [project],
     },
