@@ -12,13 +12,13 @@
 - [x] 7. Projects page fetching live data from Sanity — verified rendering ✓
 
 ## Phase 3: Polish
-- [ ] 8. Refine styling across all pages (in progress)
+- [x] 8. Refine styling across all pages
   - [x] Home page: FillLink components with canvas-based pixel-accurate hover fill animation (bottom-to-top white fill)
   - [x] CV page: brutalist section headers, scrolling vertical name ticker (VerticalName, left side, white, reverse), right-aligned social links
-  - [ ] Projects page: styling still needs work
+  - [x] Projects page: styled to match brutalist direction
   - [x] Route group `(main)` for shared nav layout on CV/Projects, home page standalone
 - [ ] 9. Social links on CV page (GitHub, LinkedIn) — right-aligned ✓ (done, tracked under item 8)
-- [ ] 10. Deploy — push to GitHub, connect to Vercel
+- [x] 10. Deploy — https://personal-site-seven-puce.vercel.app
 
 ## Key decisions
 - **CMS:** Sanity
