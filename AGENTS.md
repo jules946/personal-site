@@ -13,9 +13,15 @@ At the start of every new session or chat, read `PLAN.md` to resume from where w
 Personal site for Julius Manowski. Stack: Next.js 16 (App Router), React 19, Tailwind v4, TypeScript, Sanity CMS, pnpm.
 
 ## Pages
-- `/` — home (minimal shell for now)
-- `/cv` — hardcoded CV content, no CMS
-- `/projects` — fetches from Sanity CMS
+- `/` — home page (rust background, FillLink animated nav, vertical name tickers)
+- `/cv` — CV fetched from Sanity CMS
+- `/projects` — projects fetched from Sanity CMS
+- `/studio` — embedded Sanity Studio
+
+## Layout structure
+- `app/layout.tsx` — root layout, font only (Darker Grotesque)
+- `app/(main)/layout.tsx` — shared nav + max-width container for CV and Projects pages
+- Home page is outside `(main)` and has its own full-screen layout
 
 ## Key decisions
 - Font: Darker Grotesque (loaded via `next/font/google` in `app/layout.tsx`)
@@ -23,6 +29,13 @@ Personal site for Julius Manowski. Stack: Next.js 16 (App Router), React 19, Tai
 - Sanity project ID: `cwixueiz`, dataset: `production`
 - Sanity client lives in `lib/sanity.ts`
 - Sanity Studio embedded at `/studio` via `app/studio/[[...tool]]/page.tsx`
-- CV is hardcoded — not in Sanity. Only projects are CMS-driven.
-- Design: minimal / typographic / brutalist
+- Both CV and Projects are CMS-driven via Sanity
+- Design: brutalist / constructivist — rust (#B5451B) background on home, black/white typography
 - Git commits: use conventional commits format (`type(scope): description`)
+- Always work in feature branches, merge to main when done
+- Deployed at jules946.dev via Vercel — auto-deploys on push to main
+- og:image generated via `app/opengraph-image.tsx` using Next.js edge runtime
+
+## Components
+- `app/components/VerticalName.tsx` — scrolling vertical name ticker, hidden below `lg` breakpoint
+- `app/components/FillLink.tsx` — animated SVG fill link, touch-friendly (taps whole area on mobile)

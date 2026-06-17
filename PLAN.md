@@ -23,8 +23,8 @@
 ## Phase 4: Iteration
 - [x] CV moved to Sanity CMS
 - [x] Mobile responsiveness — hide tickers on mobile, fix touch navigation on FillLinks, reposition Edinburgh
-- [ ] Custom domain
-- [ ] SEO — meta tags, og:image
+- [x] Custom domain — jules946.dev
+- [x] SEO — meta tags, og:image, twitter card
 
 ## Key decisions
 - **CMS:** Sanity (projects + CV)
