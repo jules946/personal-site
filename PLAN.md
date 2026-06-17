@@ -22,7 +22,7 @@
 
 ## Phase 4: Iteration
 - [x] CV moved to Sanity CMS
-- [ ] Mobile responsiveness — home page, CV, projects
+- [x] Mobile responsiveness — hide tickers on mobile, fix touch navigation on FillLinks, reposition Edinburgh
 - [ ] Custom domain
 - [ ] SEO — meta tags, og:image
 
