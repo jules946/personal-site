@@ -40,7 +40,7 @@ export default async function CV() {
                     <a href={cv.github} target="_blank" rel="noopener noreferrer" className="hover:text-white">GitHub</a>
                     <a href={cv.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-white">LinkedIn</a>
                 </div>
-                <p className="text-base text-black max-w-lg">{cv.tagline}</p>
+                <p className="text-lg font-medium sm:text-base sm:font-normal text-black max-w-lg">{cv.tagline}</p>
             </section>
 
             <section className="flex flex-col gap-6">
@@ -56,7 +56,7 @@ export default async function CV() {
                                 <span>{role.startDate} – {role.endDate}</span>
                             </div>
                             <p className="text-base font-semibold mt-1">{role.title}</p>
-                            <ul className="mt-2 flex flex-col gap-1 text-base text-black list-disc list-inside">
+                            <ul className="mt-2 flex flex-col gap-1 text-lg font-medium sm:text-base sm:font-normal text-black list-disc list-inside">
                                 {role.bullets.map((bullet) => (
                                     <li key={bullet}>{bullet}</li>
                                 ))}
