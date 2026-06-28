@@ -29,8 +29,8 @@ export default async function Projects() {
                         >
                             {project.name}
                         </a>
-                        <p className="text-base">{project.description}</p>
-                        <div className="flex gap-2">
+                        <p className="text-lg font-medium sm:text-base sm:font-normal">{project.description}</p>
+                        <div className="flex flex-wrap gap-2">
                             {project.tags.map((tag) => (
                                 <span key={tag} className="text-sm font-black uppercase tracking-widest border border-black px-2 py-0.5">
                                     {tag}
