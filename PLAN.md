@@ -25,6 +25,7 @@
 - [x] Mobile responsiveness — hide tickers on mobile, fix touch navigation on FillLinks, reposition Edinburgh
 - [x] Custom domain — jules946.dev
 - [x] SEO — meta tags, og:image, twitter card
+- [x] On-demand revalidation webhook — `/api/revalidate` + Sanity webhook so publishing in Studio updates `/cv` and `/projects` without a manual redeploy
 
 ## Key decisions
 - **CMS:** Sanity (projects + CV)
