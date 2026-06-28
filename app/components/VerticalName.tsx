@@ -1,7 +1,9 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
-const FONT_SIZE = 'clamp(15rem, 40vh, 35rem)';
+// Sized off the gap between viewport edge and the centered max-w-2xl (672px + 2*24px px-6) content
+// container, minus a fixed clearance, so the ticker can never grow wide enough to reach the text.
+const FONT_SIZE = 'clamp(3rem, calc((100vw - 720px) / 2 - 1.5rem), 22rem)';
 const SPEED = 50;        // seconds per full cycle — lower = faster
 const DIRECTION = 'reverse'; // 'normal' = up, 'reverse' = down
 
