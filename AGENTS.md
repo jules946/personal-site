@@ -35,6 +35,10 @@ Personal site for Julius Manowski. Stack: Next.js 16 (App Router), React 19, Tai
 - Always work in feature branches, merge to main when done
 - Deployed at jules946.dev via Vercel — auto-deploys on push to main
 - og:image generated via `app/opengraph-image.tsx` using Next.js edge runtime
+- On-demand revalidation: `/api/revalidate` verifies a signed Sanity webhook (`next-sanity/webhook`'s `parseBody`, `@sanity/webhook` added explicitly since `next-sanity` doesn't declare it) and calls `revalidatePath` on `/cv` or `/projects` based on the published document's `_type`. Configured in Sanity's manage console → API → Webhooks, pointing at `https://jules946.dev/api/revalidate`. Without this, `/cv` and `/projects` are static at build time and only pick up CMS changes on the next deploy.
+
+## Environment variables
+- `SANITY_REVALIDATE_SECRET` — shared secret between the Sanity webhook and `/api/revalidate`; set in Vercel project settings, must match the secret configured on the webhook in Sanity's manage console
 
 ## Components
 - `app/components/VerticalName.tsx` — scrolling vertical name ticker, hidden below `lg` breakpoint
